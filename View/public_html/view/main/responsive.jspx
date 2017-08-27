@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+   
+    <f:view>
+        <af:document title="responsive" id="d1">
+            <af:form id="f1">
+            <!-- viewId="/oracle/templates/responsiveTemplate.jspx" -->
+            <!-- "/view/main/template/mainTemplate.jspx" -->
+                <af:pageTemplate viewId="/view/main/template/mainTemplate.jspx" id="pt1">
+                    <f:facet name="header" >
+                        <!--<af:image source="/resources/images/logo2.PNG" shortDesc="Sofia bus schedule" id="i1"/>-->
+                        <!--<af:button text="button 1" id="b1"/>-->
+                        <af:outputText value="Sofia bus schedule" id="ot2Header" inlineStyle="font-size:x-large;"/>
+                    </f:facet>
+                    <f:facet name="status">
+                        <af:panelGroupLayout id="pgl2">
+                        <af:outputLabel value="Current Time: " id="ol1"/>
+                            <af:outputText value="#{backingBeanScope.mainBean.currentDateTime}" id="ot1">
+                                <af:convertDateTime pattern="dd-MMM-yyyy hh:mm:ss"/>
+                            </af:outputText>
+                        </af:panelGroupLayout>
+                        <!--<af:button text="button 2" id="b2"/>-->
+                    </f:facet>
+                    <f:facet name="appNav">
+                        <!--<af:button text="button 3" id="b3"/>-->
+                    </f:facet>
+                    <f:facet name="globalLinks">
+                        <!--<af:button text="button 4" id="b4"/>-->
+                    </f:facet>
+                    <f:facet name="footer">
+                        <af:button text="button 5" id="b5"/>
+                    </f:facet>
+                    <f:facet name="center">
+                        <af:panelGroupLayout id="pgl1">
+                            
+                            <af:panelSpringboard id="ps1" displayMode="grid" childCreation="lazy">
+                                <af:showDetailItem id="item1" text = "Виртуални табла"
+                                                   icon="/resources/images/board.png">
+                                    <af:panelGroupLayout id="pgl3">
+                                        <!--<af:outputText value="Item 1 First Child. Mister Bluebird is on my shoulder. It's the truth!"
+                                           id="ot1Item1"/>-->
+                                        <af:region value="#{bindings.virtualDashboard1.regionModel}" id="r1"/>
+                                        <af:outputText value=" It's the truth!"
+                                           id="ot1Item1"/>
+                                    </af:panelGroupLayout>
+                                </af:showDetailItem>
+                                <af:showDetailItem id="item2" text = "Разписания" icon="/resources/images/schedule.png">
+                                    <af:panelGroupLayout id="pgl4">
+                                        <af:outputText value="Item 2 First Child. Mister Bluebird is on my shoulder. It's the truth!"
+                                               id="ot1Item2"/>
+                                        <af:region value="#{bindings.schedule1.regionModel}" id="r2"/>
+                                    </af:panelGroupLayout>
+                                </af:showDetailItem>
+                                <af:showDetailItem id="item3" text = "Принудително преместени автомобили"
+                                                   icon="/resources/images/table-edit.png">
+                                <af:outputText value="Item 3 First Child. Mister Bluebird is on my shoulder. It's the truth!"
+                                           id="ot1Item3"/>
+                                </af:showDetailItem>
+                                <af:showDetailItem id="item4" text = "Маршрут" icon="/resources/images/google-maps.png">
+                                    <af:outputText value="Item 1 First Child. Zippety Doo Dah, Zippety Yay. My Oh My what a wonderful day! Plenty of sunshine coming my way."
+                                           id="ot1Item4"/>
+                                    <af:outputText value="Tab 1 Second Child" id="ot2Item1"/>
+                                    <af:spacer height="200px" id="spacer1"/>
+                                </af:showDetailItem>
+                            </af:panelSpringboard>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="start">
+                        <af:button text="button 7" id="b7"/>
+                    </f:facet>
+                    <f:facet name="end">
+                        <af:button text="button 8" id="b8"/>
+                    </f:facet>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

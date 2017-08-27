@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Sofia Bus Schedules" id="d1">
+            <af:form id="f1">
+                <af:button text="Click me!" id="helloBtn" actionListener="#{backingBeanScope.mainBean.helloBtn}"/>
+                <af:outputText value="Hello !" id="ot1" partialTriggers="helloBtn"
+                               binding="#{backingBeanScope.mainBean.textField}"/>
+                <af:selectOneChoice label="Bus Stops" valueChangeListener="#{backingBeanScope.mainBean.busListVcl}"
+                                    id="soc1" value="#{backingBeanScope.mainBean.selectBusStop}">
+                    <f:selectItems value="#{backingBeanScope.mainBean.customList}" id="si1"/>
+                </af:selectOneChoice>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

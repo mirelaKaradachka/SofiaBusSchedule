@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View6">
+      <property
+         name="activityId">stopSelection</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">329.02344</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>stopSelection&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">242.34473</property>
+      <property
+         name="page">/view/virtualDashboard/stopSelection.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View7">
+      <property
+         name="activityId">stopResults</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">713.34766</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>stopResults&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">243.74707</property>
+      <property
+         name="page">/view/virtualDashboard/stopResults.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View6"
+      to="View7">
+      <property
+         name="fromOutcome">search</property>
+      <property
+         name="sdm:polyPoints">R46,370.04373,238.49414,672.34766,240.24707,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="View7"
+      to="View6">
+      <property
+         name="fromOutcome">back</property>
+      <property
+         name="sdm:polyPoints">L54,672.3274,247.24707,370.02344,245.49414,R54</property>
+   </ControlFlowCase>
+</SDM>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="virtualDashboard">
+    <default-activity>stopSelection</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="stopSelection">
+      <page>/view/virtualDashboard/stopSelection.jsff</page>
+    </view>
+    <view id="stopResults">
+      <page>/view/virtualDashboard/stopResults.jsff</page>
+    </view>
+    <control-flow-rule id="__3">
+      <from-activity-id>stopSelection</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>search</from-outcome>
+        <to-activity-id>stopResults</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>stopResults</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>stopSelection</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

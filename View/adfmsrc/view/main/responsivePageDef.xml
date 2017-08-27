@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="responsivePageDef"
+                Package="view.main">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="virtualDashboard1" taskFlowId="/view/virtualDashboard/taskFlow/virtualDashboard.xml#virtualDashboard"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="schedule1" taskFlowId="/view/schedule/taskFlow/schedule.xml#schedule" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

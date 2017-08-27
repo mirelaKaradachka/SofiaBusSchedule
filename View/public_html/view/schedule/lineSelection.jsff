@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+xmlns:f="http://java.sun.com/jsf/core" >
+  <af:panelGroupLayout id="pgl1" halign="center" layout="horizontal">
+    <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
+      <af:panelFormLayout id="pfl1">
+        
+        <af:selectOneRadio label="Вид транспорт" id="sor1" layout="horizontal" autoSubmit="true"
+                           valueChangeListener="#{backingBeanScope.lineSelectionBean.vehileTypeVcl}"
+                           value="#{backingBeanScope.lineSelectionBean.vehileTypeName}">
+          <af:selectItem label="Автобус" value="1" id="si2"/>
+          <af:selectItem label="Трамвай" value="0" id="si3"/>
+          <af:selectItem label="Тролей" value="2" id="si4"/>
+        </af:selectOneRadio>
+        <af:inputText label="Номер на #{backingBeanScope.lineSelectionBean.vehileTypeName}" id="it1"
+        partialTriggers="sor1" value="#{backingBeanScope.lineSelectionBean.lineNumber}"/>
+        <af:button text="Търсене" id="b1" action="getSchedule"
+                   actionListener="#{backingBeanScope.lineSelectionBean.searchSchedule}"/>
+        <af:statusIndicator id="si1"/>
+        <f:facet name="footer"/>
+      </af:panelFormLayout>
+    </af:panelGroupLayout>
+  </af:panelGroupLayout>
+</jsp:root>

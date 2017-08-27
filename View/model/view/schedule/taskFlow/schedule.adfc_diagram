@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">lineSchedule</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">729.3594</property>
+      <property
+         name="start">false</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>lineSchedule&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">321.34473</property>
+      <property
+         name="page">/view/schedule/lineSchedule.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">lineSelection</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">429.02246</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>lineSelection&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">310.79883</property>
+      <property
+         name="page">/view/schedule/lineSelection.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">getSchedule</property>
+      <property
+         name="sdm:polyPoints">R50,470.02246,310.44824,688.3594,320.99414,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">back</property>
+      <property
+         name="sdm:polyPoints">L54,688.1904,324.49414,470.02246,313.94824,R54</property>
+   </ControlFlowCase>
+</SDM>

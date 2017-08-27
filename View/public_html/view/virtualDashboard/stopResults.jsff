@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:panelGroupLayout id="pgl1" halign="center" layout="horizontal">
+        <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
+            <af:button text="Result" id="b1" action="back"/>
+        </af:panelGroupLayout>
+    </af:panelGroupLayout>
+</jsp:root>

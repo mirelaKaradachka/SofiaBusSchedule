@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGroupLayout id="pgl1" halign="center" layout="horizontal">
+    <af:panelGroupLayout id="pgl2" layout="vertical" halign="center">
+      <af:panelFormLayout id="pfl1">
+        <af:inputText label="Изберете спирка" id="it1"/>
+        <af:inputListOfValues label="Изберете спирка" popupTitle="Търсете спирка по нейния код или име" id="ilov1"/>
+        <af:button text="Търсене" id="b1" action="search"/>
+        <f:facet name="footer"/>
+      </af:panelFormLayout>
+    </af:panelGroupLayout>
+  </af:panelGroupLayout>
+</jsp:root>
